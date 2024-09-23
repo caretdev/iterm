@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="iterm.ZPM">
+    <Module>
+      <Name>iterm</Name>
+      <Version>0.1.0</Version>
+      <Keywords>terminal</Keywords>
+      <Description>iTerm</Description>
+      <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
+      <SystemRequirements Version=">=2024.1" />
+      <Resource Name="iTerm.PKG"/>
+      <FileCopy Name="iterm" Target="${mgrdir}python/iterm" />
+      <CSPApplication
+        Url="/iterm"
+        DispatchClass="iTerm.Router"
+        CookiePath="/iterm/"
+        UseCookies="2"
+        Directory="{$cspdir}/iterm/"
+        Name="/iterm"
+        ServeFiles="0"
+        Recurse="1"
+        PasswordAuthEnabled="1"
+        UnauthenticatedEnabled="0"
+      />
+    </Module>
+  </Document>
+</Export>

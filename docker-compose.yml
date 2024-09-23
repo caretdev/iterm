@@ -1,0 +1,13 @@
+services:
+  iris:
+    image: intersystemsdc/iris-community:latest-preview-zpm
+    volumes:
+      - ./:/home/irisowner/iterm
+    ports:
+      - 8273:52773
+    working_dir: /home/irisowner/iterm
+    environment:
+      - IRIS_USERNAME=_SYSTEM
+      - IRIS_PASSWORD=SYS
+    command:
+      -a /home/irisowner/iterm/init-dev.sh
